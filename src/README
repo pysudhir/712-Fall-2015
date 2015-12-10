@@ -1,0 +1,19 @@
+## README ##
+
+The current directory contains 2 directories
+1. leveldb: Contains modified leveldb source code
+2. ycsb-0.1.4: Contains modified ycsb
+
+How to start?
+1. leveldb has been built in ubuntu-12.04. You might want to build this again.
+   Quite a few things have to be changed if you want to execute this in MAC. Let me know if needed
+- Go to ./leveldb
+- make clean
+- make
+
+2. You might have to rebuild native code corresonding to YCSB extension of leveldb
+- Go to ./ycsb-0.1.4/leveldb-binding
+- Run ./run.sh
+- Optionally use ./ycsb-0.1.4/leveldb-binding/delete_database.sh to delete database
+- DB gets created at ./ycsb-0.1.4/sampledb 
+- run.sh does not load/execute workloads. Please read last few lines of run.sh for instructions to load/execute workloads
